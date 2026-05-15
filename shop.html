@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Mockup</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+        }
+
+        header {
+            background-color: #4db7ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .shop-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            background: white;
+            width: 280px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .product-description {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #4db7ff;
+            margin-top: auto;
+        }
+
+        .button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #4db7ff;
+            color: white;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #2aa4f0;
+        }
+
+        @media (max-width: 900px) {
+            .shop-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+  <body>
+  <header>
+    <a href="https://mo2gen.github.io/wetreatmedical.github.io/"><img src="logo.png" alt="Logo welches aus einem blauen Kreut in einem weißen Oval mit einem Text der WeTreatMedical sagt besteht"></a>
+      <h1>Unser Shop</h1>
+  </header>
+  <div class="shop-container">
+      <div class="product-card">
+          <div class="product-title">MedScan Pro</div>
+          <div class="product-description">
+              Hochentwickelte medizinische Software zur Analyse und Verwaltung von Patientendaten in Echtzeit.
+          </div>
+          <div class="price">€ 199,00</div>
+          <div class="button" onclick="goToCheckout('MedScan Pro', 199)">
+            Mehr erfahren
+          </div>
+      </div>
+
+      <div class="product-card">
+          <div class="product-title">HealthTrack AI</div>
+          <div class="product-description">
+              KI-gestützte Lösung zur automatischen Auswertung medizinischer Geräte und Sensoren.
+          </div>
+          <div class="price">€ 299,00</div>
+          <div class="button" onclick="goToCheckout('HealthTrack AI', 299)">
+            Mehr erfahren
+          </div>
+      </div>
+
+      <div class="product-card">
+          <div class="product-title">ClinicCloud</div>
+          <div class="product-description">
+              Cloud-basierte Plattform zur sicheren Speicherung und Verwaltung medizinischer Daten.
+          </div>
+          <div class="price">€ 149,00</div>
+          <div class="button" onclick="goToCheckout('ClinicCloud', 149)">
+            Mehr erfahren
+          </div>
+      </div>
+  </div>
+  <script>
+    function goToCheckout(productName, price) {
+        const url = `checkout.html?name=${encodeURIComponent(productName)}&price=${price}`;
+        window.location.href = url;
+    }
+  </script>
+  </body>
+</html>

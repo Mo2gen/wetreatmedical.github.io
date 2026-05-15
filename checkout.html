@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+        }
+
+        header {
+            background-color: #4db7ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .checkout-box {
+            background: white;
+            width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+        }
+
+        h2 {
+            margin-top: 30px;
+            color: #333;
+            font-size: 1.1rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .product-summary {
+            background: #eaf6ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .product-title {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .price {
+            color: #4db7ff;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-size: 0.9rem;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #444;
+        }
+
+        input, select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .row input {
+            flex: 1;
+        }
+
+        .payment-options {
+            display: flex;
+            gap: 20px;
+            margin-top: 10px;
+        }
+
+        .checkbox {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .buy-btn {
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #4db7ff;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .buy-btn:hover {
+            background-color: #2aa4f0;
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    Checkout
+</header>
+<div class="container">
+    <div class="checkout-box">
+        <div class="product-summary">
+          <div class="product-title" id="productName">Produkt</div>
+          <div class="price" id="productPrice">€ 0,00</div>
+        </div>
+        <form>
+            <h2>Unternehmensdaten</h2>
+            <label>Firmenname</label>
+            <input type="text">
+            <div class="row">
+                <div>
+                    <label>UID Nummer</label>
+                    <input type="text">
+                </div>
+                <div>
+                    <label>Firmenbuchnummer</label>
+                    <input type="text">
+                </div>
+            </div>
+            <h2>Ansprechperson</h2>
+            <div class="row">
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="E-Mail">
+            </div>
+            <h2>Rechnungsadresse</h2>
+            <input type="text" placeholder="Straße & Hausnummer">
+            <div class="row">
+                <input type="text" placeholder="PLZ">
+                <input type="text" placeholder="Stadt">
+            </div>
+            <input type="text" placeholder="Land">
+            <h2>Zahlungsart</h2>
+            <div class="payment-options">
+                <label><input type="radio" name="pay"> Rechnung</label>
+                <label><input type="radio" name="pay"> Kreditkarte</label>
+            </div>
+            <h2>Kartendaten</h2>
+            <input type="text" placeholder="Kartennummer">
+            <div class="row">
+                <input type="text" placeholder="MM/YY">
+                <input type="text" placeholder="CVC">
+            </div>
+            <div class="checkbox">
+                <input type="checkbox">
+                <span>Ich akzeptiere die Lizenzbedingungen und nehme die Datenschutzhinweise zur Kenntnis.</span>
+            </div>
+            <button class="buy-btn">Jetzt kostenpflichtig bestellen</button>
+        </form>
+    </div>
+</div>
+<script>
+  const params = new URLSearchParams(window.location.search);
+
+  const name = params.get("name");
+  const price = params.get("price");
+
+  if (name) {
+      document.getElementById("productName").textContent = name;
+  }
+
+  if (price) {
+      document.getElementById("productPrice").textContent = "€ " + price + ",00";
+  }
+</script>
+</body>
+</html>
