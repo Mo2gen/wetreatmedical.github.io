@@ -1,38 +1,203 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>WeTreatMedical GmBH</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-        <style>
-            #shop-link:link{
-                color: white;
+<head>
+    <title>WeTreatMedical GmbH</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+
+    <style>
+        body {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+          background-color: #ffffff;
+        }
+
+        a {
+            color: white !important;
+            text-decoration: none;
+        }
+
+        header {
+            background-color: #4db7ff;
+            height: 10vh;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            height: 60%;
+        }
+
+        #shop-link h1 {
+            font-size: 1.5rem;
+            text-align: center;
+            margin: 0;
+        }
+
+        #shop-link {
+          background-color: white;
+          color: #4db7ff !important;
+          padding: 14px 35px;
+          border-radius: 40px;
+          font-size: 1.8rem;
+          font-weight: 700;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 0.3s ease;
+        }
+
+        #shop-link:hover {
+            background-color: #e6f5ff;
+            transform: scale(1.08);
+        }
+        
+
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .slide-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .nav-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0,0,0,0.4);
+            border: none;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+
+        .prev { left: -20px; }
+        .next { right: -20px; }
+
+        .logo-wrapper {
+            position: relative;
+            text-align: center;
+            margin-top: -40px;
+            z-index: 2;
+        }
+
+        .logo-wrapper img {
+            height: 80px;
+        }
+
+        footer {
+            background-color: #4db7ff;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .footer-links span {
+            color: white;
+        }
+
+        .main-content {
+          flex: 1;
+          display: flex;
+          align-items: center;     /* vertikal */
+          justify-content: center; /* horizontal */
+        }
+
+        @media (max-width: 768px) {
+            .slide-img {
+                height: 250px;
             }
-            #shop-link:visited{
-                color: white;
+
+            .nav-btn {
+                width: 30px;
+                height: 30px;
+                font-size: 16px;
             }
-        </style>
-    </head>
-    <body class="container-fluid vh-100 m-0 p-0">
-        <header class="row w-100 rounded-bottom m-0 p-0" style="background-color: #4db7ff; height: 10% !important;">
-            <div class="col">
-                <img src="logo.png" alt="We Treat Medical Logo">
+        }
+    </style>
+</head>
+
+<body class="container-fluid p-0 m-0 vh-100">
+    <header class="d-flex w-100 m-0 justify-content-between align-items-center px-3 row">
+            <img src="logo.png" alt="Logo">
+            <a href="https://mo2gen.github.io/wetreatmedical.github.io/shop" id="shop-link">
+                Shop
+            </a>
+    </header>
+    <div class="main-content w-100">
+        <div class="col text-center">
+            <div class="rounded px-4 py-2 mb-4" style="background-color: #4db7ff; display: inline-block;">
+              <h1 style="color: #ffffff; margin: 0; font-size: 1.8rem;">Die Medizinische Software für all ihre Geräte</h1>
             </div>
-            <div class="col-6">
-                <a href="https://mo2gen.github.io/wetreatmedical.github.io/shop" id="shop-link">Shop</a>
+            <div class="slideshow-container">
+                <img id="slide" class="slide-img" src="slideshow/slideshow1.png">
+
+                <button class="nav-btn prev" onclick="changeSlide(-1)">❮</button>
+                <button class="nav-btn next" onclick="changeSlide(1)">❯</button>
             </div>
-        </header>
-        <div class="row w-100 m-0 p-0" style="height: 45% !important;">
-            <span>sdasd</span>
-            <span>sdfdsfsdffds</span>
+
         </div>
-        <footer class="row w-100" style="height: 10% !important;">
-            <div class="col">
-                <a href="https://mo2gen.github.io/wetreatmedical.github.io/impressum">Impressum</a>
-                <a href="https://mo2gen.github.io/wetreatmedical.github.io/datenschutzerklarung">Datenschutz</a>
-                <a href="https://mo2gen.github.io/wetreatmedical.github.io/lizenz">Lizenz</a>
-                <a href="https://mo2gen.github.io/wetreatmedical.github.io/barriere">Barrierefreiheit</a>
-            </div>
-        </footer>
-    </body>
+    </div>
+    <div class="logo-wrapper">
+        <img src="logo.png" alt="Logo">
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="https://mo2gen.github.io/wetreatmedical.github.io/about-us">About Us</a>
+            <span>•</span>
+            <a href="https://mo2gen.github.io/wetreatmedical.github.io/impressum">Impressum</a>
+            <span>•</span>
+            <a href="https://mo2gen.github.io/wetreatmedical.github.io/datenschutzerklarung">Datenschutz</a>
+            <span>•</span>
+            <a href="https://mo2gen.github.io/wetreatmedical.github.io/lizenz">Lizenz</a>
+            <span>•</span>
+            <a href="https://mo2gen.github.io/wetreatmedical.github.io/barriere">Barrierefreiheit</a>
+        </div>
+    </footer>
+
+  
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5; // ANPASSEN falls mehr Bilder
+
+        function showSlide(n) {
+            if (n > totalSlides) currentSlide = 1;
+            if (n < 1) currentSlide = totalSlides;
+
+            document.getElementById("slide").src =
+                "slideshow/slideshow" + currentSlide + ".png";
+        }
+
+        function changeSlide(n) {
+            currentSlide += n;
+            showSlide(currentSlide);
+        }
+
+        // Auto slideshow
+        setInterval(() => {
+            currentSlide++;
+            showSlide(currentSlide);
+        }, 4000);
+    </script>
+
+</body>
 </html>
