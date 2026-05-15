@@ -1,12 +1,150 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrierefreiheit</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+            color: #333;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: #4db7ff;
+            color: white;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header img {
+            height: 45px;
+            cursor: pointer;
+        }
+
+        .header h1 {
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        /* CONTENT */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #4db7ff;
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        a {
+            color: #4db7ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>  
+<div class="header">
+
+    <a href="https://mo2gen.github.io/wetreatmedical.github.io/">
+        <img src="logo.png" alt="WeTreatMedical Logo">
+    </a>
+
+    <h1>Barrierefreiheit</h1>
+</div>
+<div class="container">
+    <div class="card">
+        <h2>Erklärung zur Barrierefreiheit</h2>
+        <p>
+            WeTreatMedical ist bestrebt, seine Website im Einklang mit den Anforderungen der WCAG 2.1 (Level AA)
+            sowie geltenden europäischen Richtlinien barrierefrei zugänglich zu gestalten.
+        </p>
+        <p>
+            Ziel ist es, allen Nutzerinnen und Nutzern – unabhängig von körperlichen oder technischen Einschränkungen –
+            einen gleichberechtigten Zugang zu unseren digitalen Angeboten zu ermöglichen.
+        </p>
+    </div>
+    <div class="card">
+        <h2>Konformitätsstatus</h2>
+        <p>
+            Diese Website ist teilweise konform mit den Web Content Accessibility Guidelines (WCAG) 2.1, Level AA.
+            Es werden laufend Maßnahmen umgesetzt, um die Barrierefreiheit weiter zu verbessern.
+        </p>
+    </div>
+    <div class="card">
+        <h2>Bereits umgesetzte Maßnahmen</h2>
+        <ul>
+            <li>Semantisch korrektes HTML (Überschriftenstruktur H1–H3)</li>
+            <li>Klare Farbkontraste im Corporate Design</li>
+            <li>Responsive Layout für alle Endgeräte</li>
+            <li>Formularfelder mit zugeordneten Labels</li>
+            <li>Tastaturbedienbarkeit aller interaktiven Elemente</li>
+            <li>Logische Seitenstruktur und konsistente Navigation</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h2>Nicht barrierefreie Inhalte</h2>
+        <p>
+            Einige ältere oder dynamische Inhalte können noch nicht vollständig barrierefrei sein.
+            Wir arbeiten kontinuierlich daran, diese zu optimieren.
+        </p>
+    </div>
+    <div class="card">
+        <h2>Feedback und Kontakt</h2>
+        <p>
+            Wenn Ihnen Barrieren auf unserer Website auffallen oder Sie Unterstützung benötigen,
+            kontaktieren Sie uns bitte:
+        </p>
+
+        <p>
+            E-Mail: <b>support.echte@email.com</b><br>
+            Telefon: 0800 222 666
+        </p>
+    </div>
+
+    <!-- Stand -->
+    <div class="card">
+        <p class="meta">
+            Stand: Mai 2026
+        </p>
+    </div>
+
+</div>
+
+</body>
 </html>
