@@ -1,31 +1,113 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
+<html lang="de">
+<head>
     <meta charset="utf-8">
     <title>Impressum</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  </head>
-  <body>
-    <div class="rounded-bottom p-1" style="background-color: #4db7ff; color: white;">
-      <a href="https://mo2gen.github.io/wetreatmedical.github.io/"><img src="logo.png" alt="We Treat Medical Logo"></a>
-      <h1>Impressum</h1>
+
+    <style>
+        body {
+            background-color: #f5f7fb;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #4db7ff;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header img {
+            height: 50px;
+        }
+
+        .container-box {
+            max-width: 900px;
+            margin: 40px auto;
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            background-color: #4db7ff;
+            color: white;
+            font-weight: bold;
+            border-radius: 12px 12px 0 0 !important;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .text-muted-small {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <a href="https://mo2gen.github.io/wetreatmedical.github.io/">
+            <img src="logo.png" alt="WeTreatMedical Logo">
+        </a>
+        <h2 class="m-0">Impressum</h2>
     </div>
-    <h1 class="ml-1"><b>Dienstanbieterin:</b></span><h1>
-    <div class="ml-3">
-      <b>WeTreatMedical GmBH</b><br>
-      <span>Rappachgasse 49 3/2, 1110 Wien, Österreich</span><br>
-      <h1><b>Kontakt</b></h1>
-      <span>Tel: 0800 222 666</span><br>
-      <span>Mail: echte@email.com</span>
-      <span></span>
-      <h1><b>Unternehmensgegenstand</b></h1>
-      <span>Entwicklung und Vetrieb von Software für medizinische Fachgeräte und zur Administration von Arztpraxen</span>
-      <h1><b>Firmenbuch</b></h1>
-      <span>FN504052p</span>
-      <span>USt-Nr: ATU11111111</span><br>
-      <h1><b>Kammer</b></h1>
-      <span>Wirtschaftskammer Wien</span><br>
-      <span>Geschäftsführung: Christoph Allmer, John Ternus</span>
+    <div class="container container-box">
+        <div class="card p-4">
+            <div class="section-title">Dienstanbieterin</div>
+            <div class="text-muted-small">
+                <b>WeTreatMedical GmbH</b><br>
+                Rappachgasse 49 3/2<br>
+                1110 Wien, Österreich
+            </div>
+        </div>
+        <div class="card p-4">
+            <div class="section-title">Kontakt</div>
+            <div class="text-muted-small">
+                Tel: 0800 222 666<br>
+                E-Mail: echte@email.com
+            </div>
+        </div>
+        <div class="card p-4">
+            <div class="section-title">Unternehmensgegenstand</div>
+            <div class="text-muted-small">
+                Entwicklung und Vertrieb von Software für medizinische Fachgeräte und zur Administration von Arztpraxen.
+            </div>
+        </div>
+        <div class="card p-4">
+            <div class="section-title">Firmenbuch & Steuern</div>
+            <div class="text-muted-small">
+                Firmenbuchnummer: FN504052p<br>
+                USt-IdNr.: ATU11111111
+            </div>
+        </div>
+        <div class="card p-4">
+            <div class="section-title">Kammer & Geschäftsführung</div>
+            <div class="text-muted-small">
+                Wirtschaftskammer Wien<br><br>
+                Geschäftsführung:<br>
+                Christoph Allmer<br>
+                John Ternus
+            </div>
+        </div>
     </div>
-  </body>
+</body>
 </html>
