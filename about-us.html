@@ -1,12 +1,171 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-  </body>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+            color: #333;
+        }
+
+        /* HEADER */
+        .header {
+            background-color: #4db7ff;
+            color: white;
+            padding: 15px 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .header img {
+            height: 45px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.4rem;
+        }
+
+        /* CONTENT */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: #4db7ff;
+            margin-top: 0;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+        
+        .brand-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .brand-card {
+            flex: 1;
+            min-width: 250px;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            border: 2px solid #e6f5ff;
+            text-align: center;
+        }
+
+        .brand-card img {
+          max-width: 100%;
+          height: 80px;
+          object-fit: contain;
+          margin-bottom: 10px;
+        }
+
+        .marke {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #4db7ff;
+            background: #eaf6ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+    </style>
+</head>
+
+<body>
+<div class="header">
+    <a href="https://mo2gen.github.io/wetreatmedical.github.io/">
+        <img src="logo.png" alt="WeTreatMedical Logo">
+    </a>
+    <h1>About Us</h1>
+</div>
+<div class="container">
+    <div class="card">
+        <h2>Über WeTreatMedical</h2>
+        <p>
+            Die WeTreatMedical GmbH ist ein innovatives Softwareunternehmen mit Sitz in Wien,
+            spezialisiert auf die Entwicklung moderner Lösungen für medizinische Fachgeräte
+            sowie digitale Systeme zur Verwaltung von Arztpraxen.
+        </p>
+
+        <p>
+            Unser Ziel ist es, medizinische Prozesse effizienter, sicherer und zugänglicher
+            zu gestalten. Durch den Einsatz moderner Technologien und klarer Benutzerführung
+            unterstützen wir medizinisches Fachpersonal im Alltag.
+        </p>
+    </div>
+    <div class="card">
+        <h2>Unsere Marken</h2>
+
+        <div class="brand-grid">
+
+            <div class="brand-card">
+                <div class="marke">Worbildmarke</div>
+                <img src="logo.png" alt="WeTreatMedical Logo">
+                <p>
+                  Das WeTreatMedical Logo ist eine Wortbildmarke bestehend aus dem Namen unserer Firma und den 
+                </p>
+            </div>
+
+            <div class="brand-card">
+                <div class="marke">Bildmarke</div>
+                <img src="Marke2.png">
+                <p>
+                    Unser ikonisches blaues Kreuz auf weißem Kreis, repräsentiert unsere Firma nicht nur intern, sondern auch extern für potentielle und bestehende Kunden.
+                </p>
+            </div>
+
+            <div class="brand-card">
+                <div class="marke">Farbmarke</div>
+                <p>
+                  Unser Blauton <span style="color: #4db7ff;">#4db7ff</span> ist ein eindeutiges Erkennungssignal für unsere Produkte und unsere Firma.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div class="card">
+        <h2>Markenrecht & Klassifikation</h2>
+        <p>
+            Die oben genannten Bezeichnungen stellen Marken der
+            WeTreatMedical GmbH dar und werden entsprechend verwendet.
+        </p>
+
+        <p>
+            Die Marken fallen in folgenden Nizza-Klassen:
+        </p>
+
+        <ul>
+            <li><b>Klasse 10:</b>  Chirurgische, ärztliche, zahn- und tierärztliche Instrumente und Apparate, ...</li>
+            <li><b>Klasse 9:</b>  Wissenschaftliche, Forschungs-, Navigations-, Vermessungs-, fotografische, Film-, audiovisuelle, optische, Wäge-, Mess-, Signal-, Detektions-, Prüf-, Kontroll-, Rettungs- und Unterrichtsapparate und -instrumente; Apparate, ...</li>
+        </ul>
+    </div>
+</div>
+
+</body>
 </html>
